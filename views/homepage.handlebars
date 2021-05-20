@@ -1,0 +1,19 @@
+
+{{#each posts as |post| }}
+<div class="card container mb-3">
+    <div class="card-header row bg-light">
+      <div class="col-sm-9">
+        <h5 class="mb-0">
+          <a href="/post/{{post.id}}">{{post.title}}</a>
+        </h5>
+      </div>
+      <div class="col-sm-3 float-right">
+      user: {{user.username}}<br>
+      created: {{format_date post.date_created}}
+      </div>
+    </div>
+  <div class="card-body">
+    <p class="card-text">{{post.content}}</p>
+  </div>
+</div>
+{{/each}}

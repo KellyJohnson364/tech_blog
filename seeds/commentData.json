@@ -1,0 +1,17 @@
+[
+  {
+    "username": "Bill",
+    "comtent":"This is the first comment",
+    "post_id": "1"
+  },
+  {
+    "username": "Sally",
+    "comtent":"this is the second comment",
+    "post_id": "2"
+  },
+  {
+    "username": "Dave",
+    "comtent": "Third comment right here",
+    "post_id": "3"
+  }
+]
