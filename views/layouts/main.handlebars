@@ -13,17 +13,19 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between p-2">
       <nav>
-        <h5><a href="/">HomePage</a>
+        <h3><a href="/">HomePage</a>
          <a class="p-4" href="/dashboard">Dashboard</a>
 
         {{#if logged_in}}
          <a class="p-4 float-right"  href="/login" id="logout">logout</a>
         {{else}}
-         <a class ="float-right p-4" href="/login">login</a></h5>
+         <a class ="float-right p-4" href="/login">login</a></h3>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
+        <h1 class="text-center pb-4">Tecnology Blog</h1>
+
       {{{ body }}}
     </main>
     <footer>  
