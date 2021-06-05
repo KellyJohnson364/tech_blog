@@ -1,13 +1,13 @@
  <div class="card container post-list mb-3">
-        <div class="card-header row bg-light">
+        <div class="card-header p-0 pt-2 row">
           <div class="col-sm-8" >
-            <h5 class="mb-0">
-               <a href="/edit/{{post.id}}">{{post.title}}</a>
-            </h5>
+            <h6 class="mb-0 text-left p-0">
+               <p>{{post.title}}</p>
+            </h6>
           </div>
           <div class="col-sm-4 pr-0">
-            <button class="btn btn-sm del-btn btn-danger float-right" data-id="{{post.id}}">DELETE</button>
-            <button class="btn btn-sm edit-btn btn-warning float-right" data-id="{{post.id}}">EDIT</button>
+            <button class="btn btn-sm del-btn  float-right" data-id="{{post.id}}">Delete</button>
+            <button class="btn btn-sm edit-btn  float-right" data-id="{{post.id}}">Save Edit</button>
           </div>
         </div>
         <div class="card-body" contenteditable="true" >

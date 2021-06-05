@@ -19,7 +19,7 @@ const editButtonHandler = async (event) => {
    //console.log(event)
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
-    const content = document.querySelector(`#edit${id}`).innerHTML;
+    const content = document.querySelector(`#edit${id}`).innerHTML.trim();;
    
      const response = await fetch(`../api/post/${id}`, {
       method: 'PUT',

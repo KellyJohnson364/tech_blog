@@ -1,0 +1,41 @@
+:root {
+  --primary: rgb(126, 163, 145);
+  --secondary: #dff3ed;
+  --tertiary: #788585;
+  --light-dark: #354e4e;
+  --dark: #283544;
+  --border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  margin: 0px;
+  background: var(--tertiary);
+  color: rgb(14, 23, 31);
+}
+
+header {
+  background-color: var(--light-dark);
+}
+
+.card {
+  background-color: var(--secondary);
+}
+.card-header {
+  background-color: var(--primary);
+}
+a {
+  color: white
+}
+.del-btn {
+  background-color: #c2504a; ;
+}
+.edit-btn {
+  background-color: var(--tertiary);
+}

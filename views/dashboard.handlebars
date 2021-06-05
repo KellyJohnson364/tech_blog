@@ -1,21 +1,22 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{username}}!</h2>
+    <h3>Welcome, {{username}}!</h3>
   </div>
 </div>
 
 <div class="row mt-4">
   {{#if posts.length}}
   <div class="col-md-6 post-list">
-    <h3>Current posts:</h3>
+    <h5>Current posts:</h5>
 
     {{#each posts as |post| }}
       <div class="card container post-list mb-3">
-        <div class="card-header row bg-light">
+        <div class="card-header p-0 pt-2 row">
           <div class="col-sm-8" >
-            <h5 class="mb-0">
+            <h6 class="mb-0 p-0">
                <a href="/edit/{{post.id}}">{{post.title}}</a>
-            </h5>
+            </h6>
+            <p>click post title to edit post</p>
           </div>
     
         </div>
@@ -28,7 +29,7 @@
   {{/if}}
 
   <div class="col-md-6">
-    <h3>Create a New Post:</h3>
+    <h5>Create a New Post:</h5>
 
     <form class="form new-post-form">
       <div class="form-group">
