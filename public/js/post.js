@@ -1,6 +1,8 @@
 const commentFormHandler = async (event) => {
   event.preventDefault();
- 
+
+
+ // gets post by data-id identifier
   if (event.target.hasAttribute('data-id')) {
   const post_id = event.target.getAttribute('data-id');
   const comtent = document.querySelector('#comment').value.trim();

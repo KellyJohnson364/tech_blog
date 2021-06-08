@@ -25,6 +25,9 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+// Use withAuth middleware to prevent access to route
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id);
@@ -38,6 +41,9 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//get post with ID and Comment with postID = req.params.id
+
 router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const postData =  await Post.findByPk(req.params.id, {
@@ -67,10 +73,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
   }
 });
 
-
-
-
-// Use withAuth middleware to prevent access to route
+// Get all posts with the User = req.session.user_id
 router.get('/dashboard', withAuth, async (req, res) => {
  // console.log( req.session.user_id)
 
@@ -87,8 +90,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     //console.log( user)
-
-
     res.render('dashboard', {
       ...user,
       logged_in: true
@@ -98,6 +99,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+// if already logged-in redirect /login to dashboard
 router.get('/login', (req, res) => {
 
   if (req.session.logged_in) {

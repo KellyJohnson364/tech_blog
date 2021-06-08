@@ -1,3 +1,5 @@
+
+// delete post by data-id identifier
 const delButtonHandler = async (event) => {
 
   if (event.target.hasAttribute('data-id')) {
@@ -14,7 +16,7 @@ const delButtonHandler = async (event) => {
     }
   }
 };
-
+//Update post by data-id identifier
 const editButtonHandler = async (event) => {
    //console.log(event)
   if (event.target.hasAttribute('data-id')) {

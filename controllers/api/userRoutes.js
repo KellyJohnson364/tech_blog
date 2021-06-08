@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-
+// create new login
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
+      req.session.user_name = userData.username;
       req.session.logged_in = true;
 
       res.status(200).json(userData);
@@ -16,6 +17,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//login
 
 router.post('/login', async (req, res) => {
   try {
@@ -56,6 +58,8 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+//logout
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
